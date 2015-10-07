@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="cagehos-master">
+  <ClassDiagramComponents>
+    <Class name="InvalidAddressException" package="cagehos.exc" visibility="public" xPosition="36.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="InvalidCPFNumberException" package="cagehos.exc" visibility="public" xPosition="337.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Patient" package="cagehos.lib" visibility="public" xPosition="1061.0" yPosition="20.0">
+      <Fields>
+        <Field name="CLASS_NONE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="CLASS_WHITE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="CLASS_BLACK" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="CLASS_INDIAN" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="CLASS_MULATTO" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="CLASS_YELLOW" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MSTATUS_NONE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MSTATUS_MARRIED" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MSTATUS_DIVORCED" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MSTATUS_SEPARATED" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MSTATUS_OTHER" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="fatherName" type="String" visibility="private"/>
+        <Field name="motherName" type="String" visibility="private"/>
+        <Field name="bloodType" type="String" visibility="private"/>
+        <Field name="bloodFactor" type="String" visibility="private"/>
+        <Field name="observations" type="String" visibility="private"/>
+        <Field name="classType" type="int" visibility="private"/>
+        <Field name="address" type="Address" visibility="private"/>
+        <Field name="maritalStatus" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="sexType"/>
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="birth"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setParentsNames" returnType="void" visibility="public">
+          <Argument type="String" name="fatherName"/>
+          <Argument type="String" name="motherName"/>
+        </Method>
+        <Method name="getMotherName" returnType="String" visibility="public"/>
+        <Method name="getFatherName" returnType="String" visibility="public"/>
+        <Method name="setBloodType" returnType="void" visibility="public">
+          <Argument type="String" name="blType"/>
+        </Method>
+        <Method name="getBloodType" returnType="String" visibility="public"/>
+        <Method name="setBloodFactor" returnType="void" visibility="public">
+          <Argument type="String" name="blFactor"/>
+        </Method>
+        <Method name="getBloodFactor" returnType="String" visibility="public"/>
+        <Method name="setObservations" returnType="void" visibility="public">
+          <Argument type="String" name="obs"/>
+        </Method>
+        <Method name="getObservations" returnType="String" visibility="public"/>
+        <Method name="setClassType" returnType="void" visibility="public">
+          <Argument type="int" name="classType"/>
+        </Method>
+        <Method name="getClassType" returnType="int" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="Address" name="addressInfo"/>
+        </Method>
+        <Method name="getAddress" returnType="Address" visibility="public"/>
+        <Method name="setMaritalStatus" returnType="void" visibility="public">
+          <Argument type="int" name="mstatus"/>
+        </Method>
+        <Method name="getMaritalStatus" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CPF" package="cagehos.lib" visibility="public" xPosition="686.0" yPosition="20.0">
+      <Fields>
+        <Field name="CPF_MAXSIZE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="CPF_WEIGHT" type="int[]" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="REGEX_CPF" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="cpfNumber" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="removeDots" returnType="String" visibility="private" isStatic="true">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="checkDigit" returnType="int" visibility="private" isStatic="true">
+          <Argument type="String" name="str"/>
+          <Argument type="int[]" name="peso"/>
+        </Method>
+        <Method name="isValidCPF" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="setCPF" returnType="void" visibility="public">
+          <Argument type="String" name="num_CPF"/>
+        </Method>
+        <Method name="getCPF" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public">
+          <Argument type="boolean" name="formatted"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Doctor" package="cagehos.lib" visibility="public" xPosition="36.0" yPosition="150.0">
+      <Fields>
+        <Field name="treatment" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="sexType"/>
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="birth"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setTreatment" returnType="void" visibility="public">
+          <Argument type="String" name="treat"/>
+        </Method>
+        <Method name="getTreatment" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="cagehos.lib" visibility="public" xPosition="216.0" yPosition="437.0">
+      <Fields>
+        <Field name="profession" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="sexType"/>
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="birth"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getProfession" returnType="String" visibility="public"/>
+        <Method name="setProfession" returnType="void" visibility="public">
+          <Argument type="String" name="prof"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Person" package="cagehos.lib" visibility="public" xPosition="639.0" yPosition="376.0">
+      <Fields>
+        <Field name="SEX_NONE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="SEX_MALE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="SEX_FEMALE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="REGEX_NAME" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="personName" type="String" visibility="private"/>
+        <Field name="cpfNumber" type="CPF" visibility="private"/>
+        <Field name="birthDate" type="Date" visibility="private"/>
+        <Field name="sexType" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="sexType"/>
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="birth"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="validateName" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setCPF" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="getCPF" returnType="CPF" visibility="public"/>
+        <Method name="setBirthDate" returnType="void" visibility="public">
+          <Argument type="String" name="birth"/>
+        </Method>
+        <Method name="getBirthDate" returnType="Date" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Address" package="cagehos.lib" visibility="public" xPosition="1561.0" yPosition="116.0">
+      <Fields>
+        <Field name="addressName" type="String" visibility="private"/>
+        <Field name="addressNumber" type="int" visibility="private"/>
+        <Field name="addressZipCode" type="int" visibility="private"/>
+        <Field name="addressDistrict" type="String" visibility="private"/>
+        <Field name="addressCity" type="String" visibility="private"/>
+        <Field name="addressCountry" type="String" visibility="private"/>
+        <Field name="addressState" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="number"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="number"/>
+          <Argument type="String" name="district"/>
+          <Argument type="String" name="city"/>
+          <Argument type="String" name="state"/>
+          <Argument type="String" name="country"/>
+          <Argument type="int" name="zipCode"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="formatZipCode" returnType="String" visibility="public" isStatic="true">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="getCityName" returnType="String" visibility="public"/>
+        <Method name="setCityName" returnType="void" visibility="public">
+          <Argument type="String" name="city"/>
+        </Method>
+        <Method name="getStateName" returnType="String" visibility="public"/>
+        <Method name="setStateName" returnType="void" visibility="public">
+          <Argument type="String" name="state"/>
+        </Method>
+        <Method name="getCountryName" returnType="String" visibility="public"/>
+        <Method name="setCountryName" returnType="void" visibility="public">
+          <Argument type="String" name="country"/>
+        </Method>
+        <Method name="getZipCode" returnType="int" visibility="public"/>
+        <Method name="setZipCode" returnType="void" visibility="public">
+          <Argument type="int" name="zipCode"/>
+        </Method>
+        <Method name="getDistrict" returnType="String" visibility="public"/>
+        <Method name="setDistrict" returnType="void" visibility="public">
+          <Argument type="String" name="district"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="cagehos.lib.Person" target="cagehos.lib.CPF" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="cagehos.lib.Patient" target="cagehos.lib.Person"/>
+    <HasRelation name="cpfNumber" source="cagehos.lib.Person" target="cagehos.lib.CPF" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="cagehos.lib.Employee" target="cagehos.lib.Person"/>
+    <IsRelation name="is" source="cagehos.lib.Doctor" target="cagehos.lib.Employee"/>
+    <HasRelation name="address" source="cagehos.lib.Patient" target="cagehos.lib.Address" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cagehos.lib.Patient" target="cagehos.lib.Address" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
