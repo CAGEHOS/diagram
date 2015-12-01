@@ -2,7 +2,7 @@
 
 <ClassDiagram name="cagehos">
   <ClassDiagramComponents>
-    <Class name="ConnectionBD" package="cagehos.bd" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="ConnectionBD" package="cagehos.bd" visibility="public" xPosition="625.0" yPosition="1019.0">
       <Fields>
         <Field name="BDDriver" type="String" visibility="package" isStatic="true" isFinal="true"/>
         <Field name="DEFAULT_BDNAME" type="String" visibility="package" isStatic="true" isFinal="true"/>
@@ -28,7 +28,7 @@
         <Method name="encerraConexao" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="InvalidAddressException" package="cagehos.exc" visibility="public" xPosition="446.0" yPosition="20.0">
+    <Class name="InvalidAddressException" package="cagehos.exc" visibility="public" xPosition="603.0" yPosition="426.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -38,7 +38,7 @@
       </Constructors>
       <Methods/>
     </Class>
-    <Class name="InvalidCPFNumberException" package="cagehos.exc" visibility="public" xPosition="702.0" yPosition="20.0">
+    <Class name="InvalidCPFNumberException" package="cagehos.exc" visibility="public" xPosition="592.0" yPosition="244.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -48,7 +48,7 @@
       </Constructors>
       <Methods/>
     </Class>
-    <Class name="InvalidFieldException" package="cagehos.exc" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="InvalidFieldException" package="cagehos.exc" visibility="public" xPosition="613.0" yPosition="649.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -58,7 +58,7 @@
       </Constructors>
       <Methods/>
     </Class>
-    <Class name="InvalidNameException" package="cagehos.exc" visibility="public" xPosition="1220.0" yPosition="20.0">
+    <Class name="InvalidNameException" package="cagehos.exc" visibility="public" xPosition="891.0" yPosition="244.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -68,7 +68,7 @@
       </Constructors>
       <Methods/>
     </Class>
-    <Class name="Central" package="cagehos.gui" visibility="public" xPosition="-7.0" yPosition="1118.0">
+    <Class name="Central" package="cagehos.gui" visibility="public" xPosition="1520.0" yPosition="20.0">
       <Fields>
         <Field name="btAddEntry" type="javax.swing.JButton" visibility="private"/>
         <Field name="btSearchEntry" type="javax.swing.JButton" visibility="private"/>
@@ -95,9 +95,9 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Consultar" package="cagehos.gui" visibility="public" xPosition="50.0" yPosition="1482.0">
+    <Class name="Consultar" package="cagehos.gui" visibility="public" xPosition="2222.0" yPosition="20.0">
       <Fields>
-        <Field name="btSearchQuery" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btSearchQuery" type="javax.swing.JButton" visibility="private" isStatic="true"/>
         <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
         <Field name="lbTipoDeCadastro" type="javax.swing.JLabel" visibility="private"/>
@@ -109,6 +109,7 @@
         <Field name="rbPatient" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="searchPersonTypeButtonGroup" type="javax.swing.ButtonGroup" visibility="private"/>
         <Field name="spResultsPanel" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tableSearchResults" type="javax.swing.JTable" visibility="private"/>
         <Field name="tfSearchCPF" type="javax.swing.JFormattedTextField" visibility="private"/>
         <Field name="tfSearchName" type="javax.swing.JTextField" visibility="private"/>
       </Fields>
@@ -117,23 +118,37 @@
       </Constructors>
       <Methods>
         <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
-        <Method name="rbDoctorActionPerformed" returnType="void" visibility="private">
-          <Argument type="java.awt.event.ActionEvent" name="evt"/>
-        </Method>
         <Method name="btSearchQueryActionPerformed" returnType="void" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tableSearchResultsMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
         </Method>
         <Method name="main" returnType="void" visibility="public" isStatic="true">
           <Argument type="String" name="args"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="TelaCadastro" package="cagehos.gui" visibility="public" xPosition="2052.0" yPosition="20.0">
+    <Class name="TelaCadastro" package="cagehos.gui" visibility="public" xPosition="3452.0" yPosition="20.0">
       <Fields>
+        <Field name="TIPO_CADASTRO_STRING" type="String[]" visibility="private" isFinal="true"/>
+        <Field name="tipoCadastro" type="int" visibility="private"/>
+        <Field name="InsertionInformationPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel10" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel11" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="InsertionInformationPanel9" type="javax.swing.JPanel" visibility="private"/>
         <Field name="btCancel1" type="javax.swing.JButton" visibility="private"/>
         <Field name="btCancel2" type="javax.swing.JButton" visibility="private"/>
         <Field name="btCancel3" type="javax.swing.JButton" visibility="private"/>
         <Field name="btCancel4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btDelete" type="javax.swing.JButton" visibility="private"/>
         <Field name="btEdit" type="javax.swing.JButton" visibility="private"/>
         <Field name="btFinish1" type="javax.swing.JButton" visibility="private"/>
         <Field name="btFinish2" type="javax.swing.JButton" visibility="private"/>
@@ -169,31 +184,20 @@
         <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
-        <Field name="jPanel10" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel13" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel14" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel15" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel16" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel17" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel18" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel19" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel20" type="javax.swing.JPanel" visibility="private"/>
         <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
-        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
         <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
         <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
         <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
         <Field name="mTabCadastro" type="javax.swing.JTabbedPane" visibility="private"/>
+        <Field name="pAddressInfo" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pButtons" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pButtons2Page" type="javax.swing.JPanel" visibility="private"/>
         <Field name="pFunTab" type="javax.swing.JPanel" visibility="private"/>
         <Field name="pGeneraInfo" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pMainInfo" type="javax.swing.JPanel" visibility="private"/>
         <Field name="pMedTab" type="javax.swing.JPanel" visibility="private"/>
         <Field name="pPacTab" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pPatientInfo" type="javax.swing.JPanel" visibility="private"/>
         <Field name="tfAddressComplement" type="javax.swing.JTextField" visibility="private"/>
         <Field name="tfAddressDistrict" type="javax.swing.JTextField" visibility="private"/>
         <Field name="tfAddressName" type="javax.swing.JTextField" visibility="private"/>
@@ -215,6 +219,7 @@
         <Constructor visibility="public">
           <Argument type="int" name="tipoCadastro"/>
           <Argument type="boolean" name="editMode"/>
+          <Argument type="ResultSet" name="info"/>
         </Constructor>
       </Constructors>
       <Methods>
@@ -264,12 +269,18 @@
         <Method name="tfAddressComplementFocusLost" returnType="void" visibility="private">
           <Argument type="java.awt.event.FocusEvent" name="evt"/>
         </Method>
+        <Method name="btEditActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btDeleteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
         <Method name="main" returnType="void" visibility="public" isStatic="true">
           <Argument type="String" name="args"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="Address" package="cagehos.lib" visibility="public" xPosition="20.0" yPosition="494.0">
+    <Class name="Address" package="cagehos.lib" visibility="public" xPosition="2807.0" yPosition="496.0">
       <Fields>
         <Field name="addressName" type="String" visibility="private"/>
         <Field name="addressNumber" type="int" visibility="private"/>
@@ -326,7 +337,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="CPF" package="cagehos.lib" visibility="public" xPosition="886.0" yPosition="1395.0">
+    <Class name="CPF" package="cagehos.lib" visibility="public" xPosition="639.0" yPosition="1525.0">
       <Fields>
         <Field name="CPF_MAXSIZE" type="int" visibility="public" isStatic="true" isFinal="true"/>
         <Field name="CPF_WEIGHT" type="int[]" visibility="public" isStatic="true" isFinal="true"/>
@@ -357,9 +368,12 @@
           <Argument type="boolean" name="formatted"/>
         </Method>
         <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="CPF" name="toCompare"/>
+        </Method>
       </Methods>
     </Class>
-    <Class name="Doctor" package="cagehos.lib" visibility="public" xPosition="896.0" yPosition="670.0">
+    <Class name="Doctor" package="cagehos.lib" visibility="public" xPosition="1600.0" yPosition="1152.0">
       <Fields>
         <Field name="treatment" type="String" visibility="private"/>
         <Field name="crmID" type="int" visibility="private"/>
@@ -383,7 +397,7 @@
         <Method name="getCRM" returnType="int" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Employee" package="cagehos.lib" visibility="public" xPosition="886.0" yPosition="1108.0">
+    <Class name="Employee" package="cagehos.lib" visibility="public" xPosition="2222.0" yPosition="689.0">
       <Fields>
         <Field name="profession" type="String" visibility="private"/>
       </Fields>
@@ -410,7 +424,7 @@
         <Method name="getWorkingSection" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Patient" package="cagehos.lib" visibility="public" xPosition="1556.0" yPosition="655.0">
+    <Class name="Patient" package="cagehos.lib" visibility="public" xPosition="1399.0" yPosition="649.0">
       <Fields>
         <Field name="bloodType" type="String" visibility="private"/>
         <Field name="observations" type="String" visibility="private"/>
@@ -434,7 +448,7 @@
         <Method name="getObservations" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Person" package="cagehos.lib" visibility="public" xPosition="1554.0" yPosition="1089.0">
+    <Class name="Person" package="cagehos.lib" visibility="public" xPosition="1361.0" yPosition="1551.0">
       <Fields>
         <Field name="REGEX_NAME" type="String" visibility="public" isStatic="true" isFinal="true"/>
         <Field name="personName" type="String" visibility="private"/>
@@ -472,7 +486,7 @@
         <Method name="setBirthDate" returnType="void" visibility="public">
           <Argument type="String" name="birth"/>
         </Method>
-        <Method name="getBirthDate" returnType="Date" visibility="public"/>
+        <Method name="getBirthDate" returnType="String" visibility="public"/>
         <Method name="setIDType" returnType="void" visibility="public">
           <Argument type="String" name="idType"/>
         </Method>
@@ -485,10 +499,9 @@
           <Argument type="String" name="mstatus"/>
         </Method>
         <Method name="getMaritalStatus" returnType="String" visibility="public"/>
-        <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="FieldValidator" package="cagehos.lib.util" visibility="public" xPosition="1508.0" yPosition="20.0">
+    <Class name="FieldValidator" package="cagehos.lib.util" visibility="public" xPosition="2925.0" yPosition="20.0">
       <Fields>
         <Field name="FIELD_ERROR_NONE" type="int" visibility="private" isFinal="true"/>
         <Field name="FIELD_ERROR_EMPTY" type="int" visibility="private" isFinal="true"/>
@@ -526,47 +539,81 @@
         <Method name="isValidAsAddressDistrict" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="InterfaceBackbone" package="cagehos.lib.util" visibility="public" xPosition="1293.0" yPosition="1749.0">
-      <Fields/>
+    <Class name="InterfaceBackbone" package="cagehos.lib.util" visibility="public" xPosition="2090.0" yPosition="1779.0">
+      <Fields>
+        <Field name="INSERT_PATIENT_DBPATH" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="INSERT_EMPLOYEE_DBPATH" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="INSERT_DOCTOR_DBPATH" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="conector" type="ConnectionBD" visibility="private" isStatic="true"/>
+        <Field name="conexao" type="Connection" visibility="private" isStatic="true"/>
+        <Field name="cmdParam" type="PreparedStatement" visibility="private" isStatic="true"/>
+      </Fields>
       <Constructors/>
       <Methods>
         <Method name="validateNameField" returnType="void" visibility="public" isStatic="true">
           <Argument type="String" name="name"/>
-          <Argument type="javax.swing.JTextField" name="field"/>
+          <Argument type="JTextField" name="field"/>
           <Argument type="boolean" name="mandatory"/>
         </Method>
         <Method name="validateNumberField" returnType="void" visibility="public" isStatic="true">
           <Argument type="String" name="name"/>
-          <Argument type="javax.swing.JTextField" name="field"/>
+          <Argument type="JTextField" name="field"/>
           <Argument type="boolean" name="mandatory"/>
         </Method>
         <Method name="validateAddressField" returnType="void" visibility="public" isStatic="true">
           <Argument type="String" name="name"/>
-          <Argument type="javax.swing.JTextField" name="field"/>
+          <Argument type="JTextField" name="field"/>
           <Argument type="boolean" name="mandatory"/>
         </Method>
         <Method name="validateAddressComplementField" returnType="void" visibility="public" isStatic="true">
           <Argument type="String" name="name"/>
-          <Argument type="javax.swing.JTextField" name="field"/>
+          <Argument type="JTextField" name="field"/>
           <Argument type="boolean" name="mandatory"/>
         </Method>
-        <Method name="validatePatientEntry" returnType="void" visibility="public" isStatic="true">
-          <Argument type="LinkedHashMap&lt;String, String&gt;" name="info"/>
+        <Method name="searchQuery" returnType="void" visibility="public" isStatic="true">
+          <Argument type="JTable" name="tableSearchResults"/>
+          <Argument type="JRadioButton" name="rbDoctor"/>
+          <Argument type="JRadioButton" name="rbEmployee"/>
+          <Argument type="JTextField" name="nameFilter"/>
+          <Argument type="JTextField" name="cpfFilter"/>
         </Method>
-        <Method name="validateDoctorEntry" returnType="void" visibility="public" isStatic="true">
-          <Argument type="LinkedHashMap&lt;String, String&gt;" name="info"/>
+        <Method name="getInformationFromSearchEntry" returnType="ResultSet" visibility="public" isStatic="true">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+          <Argument type="JTable" name="tableSearchResults"/>
+          <Argument type="JRadioButton" name="rbDoctor"/>
+          <Argument type="JRadioButton" name="rbEmployee"/>
+          <Argument type="JRadioButton" name="rbPatient"/>
         </Method>
-        <Method name="validateEmployeeEntry" returnType="void" visibility="public" isStatic="true">
-          <Argument type="LinkedHashMap&lt;String, String&gt;" name="info"/>
+        <Method name="deleteFromDatabase" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="insertDoctor" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Doctor" name="entry"/>
+          <Argument type="Address" name="entryAddress"/>
+        </Method>
+        <Method name="insertEmployee" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Employee" name="entry"/>
+          <Argument type="Address" name="entryAddress"/>
+        </Method>
+        <Method name="insertPatient" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Patient" name="entry"/>
+          <Argument type="Address" name="entryAddress"/>
+          <Argument type="JComboBox" name="cbPrefDoctor"/>
         </Method>
       </Methods>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <IsRelation name="is" source="cagehos.lib.Patient" target="cagehos.lib.Person"/>
     <IsRelation name="is" source="cagehos.lib.Employee" target="cagehos.lib.Person"/>
-    <HasRelation name="cpfNumber" source="cagehos.lib.Person" target="cagehos.lib.CPF" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cagehos.lib.util.InterfaceBackbone" target="cagehos.lib.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="cagehos.lib.Person" target="cagehos.lib.CPF" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cagehos.lib.CPF" target="cagehos.lib.CPF" sourceCardinality="1..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="cagehos.lib.Doctor" target="cagehos.lib.Employee"/>
+    <HasRelation name="cpfNumber" source="cagehos.lib.Person" target="cagehos.lib.CPF" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="cagehos.lib.Patient" target="cagehos.lib.Person"/>
+    <UseRelation source="cagehos.lib.util.InterfaceBackbone" target="cagehos.lib.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cagehos.lib.util.InterfaceBackbone" target="cagehos.lib.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conector" source="cagehos.lib.util.InterfaceBackbone" target="cagehos.bd.ConnectionBD" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
